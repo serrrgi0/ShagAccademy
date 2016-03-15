@@ -6,7 +6,7 @@ package lesson7.Runable;
 public class First {
     public static void main(String[] args) {
         Thread runnable = new Thread(new MyRunnable());
-        Thread thread = new MyThead();
+        Thread thread = new MyThread();
         try {
             runnable.start();
             runnable.join();//останавливает поток дожидаясь завершения
@@ -16,7 +16,7 @@ public class First {
         }
     }
 }
-class MyThead extends Thread {
+class MyThread extends Thread {
     @Override
     public void run() {
         for (int i = 0; i <20 ; i++) {
